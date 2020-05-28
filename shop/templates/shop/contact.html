@@ -1,0 +1,81 @@
+{% extends 'shop/basic.html' %}
+
+{% block css %}
+body {
+  background-color: LightBlue;
+}
+
+#page-container {
+position: relative;
+min-height: 10vh;
+}
+
+#content-wrap {
+padding-bottom: 2.5rem;    /* Footer height */
+}
+
+
+footer {
+      text-align: center;
+      padding: 10px;
+      background-color:teal;
+      color: white;
+      height: 200px;
+    }
+
+
+.fa-instagram{
+  padding-right: 20px;
+}
+  /* Footer height */
+  }
+{% endblock %}
+{% block title%} Contact Us - My Awesome Cart{% endblock %}
+{% block contactactive %} active {% endblock contactactive %}
+{% block body %}
+<div class="container my-3">
+    <h3>Contact Us</h3>
+    <form action="/shop/contact/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="username">Name</label>
+    <input type="text" class="form-control" id="username" name='username' placeholder="Enter Your Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your Email">
+  </div>
+
+    <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+  </div>
+
+
+   <div class="form-group">
+    <label for="query">How May We Help You?</label>
+    <textarea class="form-control" id="query" name='query' rows="3"></textarea>
+  </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+</form>
+
+
+  <div id="page-container" style="color:white">
+    <div id="content-wrap">
+
+  </div>
+  </div>
+  </div>
+
+
+<footer class='container-fluid'>
+  <h2>For contact</h2>
+  <p>coursesoncart@gmail.com</p>
+  <p>phone no:99999999</p>
+  <i class="fa fa-facebook-square" style="font-size:30px"></i><span>  </span>
+  <i class="fa fa-instagram" style="font-size:30px"></i>
+
+</footer>
+
+
+</div>
+{% endblock %}
