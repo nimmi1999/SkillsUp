@@ -12,9 +12,9 @@ class Product(models.Model):
     image = models.ImageField(upload_to='shop/images', default="")
     link = models.URLField(max_length=250, default="")
 
-
     def __str__(self):
         return self.product_name
+
 
 class Contact(models.Model):
     username = models.CharField(max_length=40)
@@ -24,3 +24,13 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.username
+
+
+class Blog(models.Model):
+    img = models.ImageField(upload_to ='shop/images', default="")
+    title = models.CharField(max_length = 200)
+    pub_date = models.DateField()
+    desc = models.CharField(max_length = 3000)
+    author = models.CharField(max_length = 50, default="")
+    def __str(self):
+        return self.title

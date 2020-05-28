@@ -1,0 +1,26 @@
+{% extends 'shop/basic.html' %}
+{% block title%} Blog {% endblock %}
+{% block blogactive %} active {% endblock blogactive %}
+{% block body %}
+{% load static %}
+
+  <h1>Blog by SkillsUp</h1>
+  {% for item in myposts %}
+<div class="container">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <div style="clear: right">
+              <img src="/media/{{item.img}}" align=”right” />
+            </div>
+
+            <h3 class="mb-0">{{item.title}}</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">{{item.desc}}</p>
+            <strong class="d-inline-block mb-2 text-success">by: {{item.author}}</strong>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+ {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Product, Contact
+from .models import Product, Contact, Blog
 from math import ceil
 
 # Create your views here.
@@ -58,9 +58,10 @@ def productView(request, myid):
 def about(request):
     return render(request, 'shop/about.html')
 
-# def contact(request):
-#     # return HttpResponse('hello')
-#     return render(request, 'shop/index.html.html')
+def blog(request):
+    myposts = Blog.objects.all()
+    print(myposts)
+    return render(request, 'shop/blog.html',{'myposts': myposts})
 
 def contact(request):
     thank = False

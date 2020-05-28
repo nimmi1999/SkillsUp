@@ -12,4 +12,5 @@ urlpatterns = [
     path("search/", views.search, name="Search"),
     path("contact/", views.contact, name="ContactUs"),
     path("products/<int:myid>", views.productView, name="ProductView"),
+    path("blog/", views.blog, name="blog"),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
