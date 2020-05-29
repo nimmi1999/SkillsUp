@@ -1,6 +1,9 @@
 
 {% extends 'shop/basic.html' %}
 {% block css %}
+          body {
+          background-color: DarkSlateGray;
+          }
           .col-md-3
           {
           display: inline-block;
@@ -8,6 +11,7 @@
           }
           .card {
             height : 400px;
+            background-color: black;
           }
           .carousel-indicators .active {
           background-color: blue;
@@ -71,8 +75,8 @@
           <div class="card align-items-center" style="width: 18rem;">
             <img src='/media/{{i.image}}' class="card-img-top" >
             <div class="card-body">
-                <h5 class="card-title">{{i.product_name}}</h5>
-                <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
+                <h5 class="card-title" style="color:red">{{i.product_name|slice:"0:20"}}...</h5>
+                <p class="card-text" style="color:silver">{{i.desc|slice:"0:58"}}...</p>
                 <a href="/shop/products/{{i.id}}"><button id="qv{{i.id}}" class="btn btn-primary cart">Details</button></a>
             </div>
           </div>

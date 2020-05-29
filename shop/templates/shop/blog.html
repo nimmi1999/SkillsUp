@@ -1,12 +1,41 @@
 {% extends 'shop/basic.html' %}
 {% block title%} Blog {% endblock %}
 {% block blogactive %} active {% endblock blogactive %}
+{% block css %}
+
+.container {
+  background-color : white;
+}
+body{
+  background-color: PeachPuff;
+}
+
+.blog-section {
+padding: 50px;
+text-align: center;
+background-color: LightSeaGreen;
+color: black;
+}
+
+{% endblock %}
+
 {% block body %}
 {% load static %}
 
-  <h1>Blog by SkillsUp</h1>
+
+    <div class="blog-section">
+        <h1>Blogs by SkillsUp</h1>
+
+        <p>Everyone can publish their blogs. If you want to share your blog,you can directle send to the given email address with the neccessary details. These blogs are written by Company, Staff, Users, Students.</p>
+      </div>
+
+
+
+    <div class="header">
+
+  </div>
   {% for item in myposts %}
-<div class="container">
+<div class="container my-3">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <div style="clear: right">
@@ -14,9 +43,9 @@
             </div>
 
             <h3 class="mb-0">{{item.title}}</h3>
-            <div class="mb-1 text-muted">Nov 11</div>
+            <div class="mb-1 ">{{item.pub_date}}</div>
             <p class="mb-auto">{{item.desc}}</p>
-            <strong class="d-inline-block mb-2 text-success">by: {{item.author}}</strong>
+            <strong class="d-inline-block mb-2 text-danger">by: {{item.author}}</strong>
           </div>
           <div class="col-auto d-none d-lg-block">
         </div>
