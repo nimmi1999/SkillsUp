@@ -1,53 +1,102 @@
 
 {% extends 'shop/basic.html' %}
-
+{% load static %}
 {% block title%} Title of About{% endblock %}
 {% block homeactive %} active {% endblock homeactive %}
-{% block body %}
 
 {% load static %}
-
-
-
-<!-- <img src="{% static 'back.jpg' %}" alt="Girl in a jacket" width="1350" height="600">
-<br /> -->
-
-
-
+{% block body %}
 
 <div class="w3-container my-3">
-  <img src="{% static 'back.jpg' %}" alt="Girl in a jacket" width=100% height="700px">
- <div class="text-block" style="text-align:center">
-    <h1 style="text-align:center">WANT TO LEARN NEW SKILLS..??</h1>
-    <p>SkillsUp is a web service where you can learn programming online.</p>
-    <p>We offer you a fully equipped coding environment to get you started.</p>
-    <button type="button" class="btn btn-success">Sign up with Email</button>
-    <p>or</p>
-    <button type="button" class="btn btn-success">Sign up with Facebook</button>
-    <button type="button" class="btn btn-success">Sign up with Twitter</button>
-  </div>
+<img src= "{% static 'back.jpg' %}" alt="Girl in a jacket" width="1350" height="600">
+<div class="text-block">
+<h1>WANT TO</h1>
+<h1>LEARN NEW </h1>
+<h1>SKILLS..??</h1>
 </div>
-<!-- <div class=""> -->
-<div class="container">
-  <!-- <p>Hover over the image:</p> -->
-  <img src="{% static 'lapy2.jpg' %}" id = "im" width="300" height="300">
-  <div class="container-text">
-    <h1>Kya Aapke concepts bhi iss picture ki trh hile hue hai?</h1>
-    <h1>Learn Where to get Started with SkillsUp</h1>
-  </div>
 </div>
-<h1>Ready To Become An Awesome Programmer?</h1>
-<p>Let's learn to code, learn to be creative!</p>
-<button type="button" class="btn btn-success">Start Learning</button>
+
+
+<div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src= "{% static 'course.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Courses</h4>
+
+                        <p class="card-text">Go through from courses, you will definitely find something usefull.</p>
+                        <a href="{% url 'ShopHome' %}" class="btn btn-primary stretched-link">See Courses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'blog1.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Blogs</h4>
+
+                        <p class="card-text">You can publish your own blog as well as read other's blog.</p>
+                        <a href="{% url 'blog' %}" class="btn btn-primary stretched-link">See Blogs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'contact.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Contact Us</h4>
+
+                        <p class="card-text">Feel free to ask anything. We will try to hell you out as early as possible.</p>
+                        <a href="{% url 'ContactUs' %}" class="btn btn-primary stretched-link">See Contacts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'about.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Our Team</h4>
+
+                        <p class="card-text">Our team is small in size but big in talent. If want to know more about team you can go through their github profile.</p>
+                        <a href="{% url 'AboutUs' %}" class="btn btn-primary stretched-link">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+<footer class='container-fluid'>
+  <h2>For contact</h2>
+  <p>skillsup@gmail.com</p>
+  <p>phone no:99999999</p>
+  <i class="fa fa-facebook-square" style="font-size:30px"></i><span>  </span>
+  <i class="fa fa-instagram" style="font-size:30px"></i>
+
+</footer>
+
 {% endblock %}
 
 
 {% block css %}
+body{
+  background-color: black;
+}
 
+#content img {
+  float: center;
+}
 .container-text {
   top: 80px;
   right: 200px;
-  color: black;
+  color: White;
+}
+
+.content p{
+  text-color : white;
+  float: right;
 }
 
  .text-block {
@@ -63,44 +112,43 @@
 .text-block h1{
   font-size: 100px;
 }
-button {
- background-color: #4CAF50;
- border: 1px solid green;
- color: white;
- padding: 10px 24px;
- cursor: pointer;
-}
 
-button:hover {
- background-color: #3e8e41;
-}
 #im:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+
+
+.card img{
+  height : 200px;
 }
 
-.container {
+ .card {
   <!-- background-color: DarkSlateGray; -->
-  <!-- max-width: 1400; -->
-  height: 1000px;
-  width: 1200px;
- background-color: grey;
-.container-text h1{
-  text-align:center;
+   max-width: 400;
+   height: 420px;
+
 }
+
+#content-wrap {
+padding-bottom: 2.5rem;    /* Footer height */
 }
+
+
+footer {
+      text-align: center;
+      padding: 10px;
+      background-color:DarkSlateGrey;
+      color: white;
+      height: 200px;
+    }
+
+
+.fa-instagram{
+  padding-right: 20px;
+}
+  /* Footer height */
+  }
+
 {% endblock %}
