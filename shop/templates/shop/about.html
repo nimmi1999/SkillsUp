@@ -1,9 +1,3 @@
-{% extends 'shop/basic.html' %}
-
-{% block title%} About{% endblock %}
-
-{% block aboutactive %} active {% endblock aboutactive %}
-{% block css %}
 <style type="text/css">
 .header {
     padding: 60px;
@@ -44,7 +38,7 @@ body{
 
     }
 
-    footer {
+    .footer {
       text-align: center;
       padding: 10px;
       background-color:#474e5d;
@@ -53,57 +47,71 @@ body{
     }
 
 </style>
-{% endblock %}
-
-{% block body %}
-
     <div class="about-section">
         <h1>SkillsUp</h1>
 
         <p>Through SkillsUp you can increase your skills during quarantine as well as in our daily routine. We have created a site through which you can choose different courses from different platforms. You will also get to know the different courses available in the era. Most of the students know about few courses which are famous but from this site you can get different courses and not only of courses but also about the platform according to your budget.If you are still confused between the courses or platform to choose, feel free to use the contact block and we'll definitely try to help you.</p>
       </div>
-
-
-
-    <div class="header">
+      <div class="card-group">
+  <div class="card bg-danger">
+    <div class="card-body text-center">
+      <h1>CREATIVITY</h1>
+      <p class="card-text">It's the ability to think outside the box. We make decisions, create something new and generate a lot of ideas.</p>
+    </div>
+  </div>
+  <div class="card bg-danger">
+    <div class="card-body text-center">
+      <h1>WORLDWIDE</h1>
+      <p class="card-text">All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.</p>
+    </div>
+  </div>
+  <div class="header">
         <h1>Our Team</h1>
   </div>
-  {% load static %}
-
-
-  <section>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 mb-4">
+      <table>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col">
                 <div class="card">
-                    <img class="card-img-top" src= "{% static 'anjali1.jpg' %}"  alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Anjali</h4>
-
-                        <p class="card-text"> WEB DEVELOPER-BACKEND</p>
+                  <img class="card-img-top" src= "anjali1.jpg"  alt="" style="width:50%">
+                  <div class="card-body">
+                    <h4 class="card-title">Anjali</h4>
+                    <p class="card-text"> WEB DEVELOPER-BACKEND</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <h3>ANJALI PUSHKAR</h3>
+            <p>Anjali was born in 2000 in Delhi.She studies in GGSIP University. Excellent client manager. she is always accurate, all promises are fulfilled, all questions get answers, the team presents very attentive and positive approach.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="nimmi.jpg" alt="" style="width:50%">
+                        <div class="card-body">
+                            <h4 class="card-title">Nirmal</h4>
+                            <p class="card-text">WEB DEVELOPER-FRONTEND</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
-        </div>
-        <div class="row">
-            <div class="col-lg-3 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="{% static 'nimmi.jpg' %}" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Nirmal</h4>
-
-                        <p class="card-text">WEB DEVELOPER-FRONTEND</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+          </td>
+          <td>
+            <h3>NIRMAL SINGH</h3>
+            <p>Nirmal was born in 1999 in Delhi.She studies in GGSIP University. Excellent client manager. she is always accurate, all promises are fulfilled, all questions get answers, the team presents very attentive and positive approach. </p>
+          </td>
+        </tr>
+      </table>
 <footer>
+  <h1 style="text-align:center">Our Clients</h1>
+  <p style="text-align:center">Thank You for Choosing Us!</p>
   <h2>For contact</h2>
   <p>skillsup@gmail.com</p>
   <p>phone no:99999999</p>
@@ -112,6 +120,3 @@ body{
 
 </footer>
 
-
-
-{% endblock %}
