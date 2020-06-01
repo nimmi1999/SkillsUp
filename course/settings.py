@@ -8,8 +8,8 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
-"""
-import django-heroku
+# """
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 MIDDLEWARE = [
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]h
+]
 
 ROOT_URLCONF = 'course.urls'
 
@@ -130,7 +130,3 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL =  '/media/'
-
-
-# Activate Django-Heroku.
-django_heroku.settings(locals())
